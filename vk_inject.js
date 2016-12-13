@@ -26,7 +26,8 @@
        "инвестор",
        "Олега Карнауха",
        "yквaльно мeсяц назaд со мной",
-       "вкусный подарок для вашей любимой девочки"
+       "вкусный подарок для вашей любимой девочки",
+       "КАК НАЧАТЬ СВОЙ БИЗНЕС, НЕ ИМЕЯ ОПЫТА"
    ];
     if(!localStorage.getItem("WrongPost")){
 
@@ -101,6 +102,8 @@ var count = 0;
                     var delBut = node.querySelector("a[onclick*=\"feed.ig\"]");
                     if(delBut){
                         delBut.click();
+                        let c = localStorage.getItem("countHidePost") || 0;
+                        localStorage.setItem("countHidePost", c+1);
                     }
                     console.log("HIDE POST");
                 }

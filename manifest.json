@@ -1,9 +1,17 @@
 {
 	"manifest_version": 2,
 
-	"name": "Загрузчик музыки из Вконтакте",
-	"description": "Позволяет вам загрузить музыку из социальной сети Вконтакте.",
+	"name": "Скрытие мусора Вконтакте",
+	"description": "Позволяет скрыть мусорные посты из социальной сети Вконтакте.",
 	"version": "2.0",
+
+	"icons": {
+		"16": "icons/16x16.png",
+		"32": "icons/32x32.png",
+        "48": "icons/48x48.png",
+		"64": "icons/64x64.png",
+        "128": "icons/128x128.png"
+    },
 
 	"content_scripts": [{
 		"matches": ["*://vk.com/*"],
@@ -11,7 +19,7 @@
 		"css": ["vk_styles.css"]
 	}],
     "browser_action": {
-        "default_title": "LostTime",
+        "default_title": "Чистка",
 
         "default_popup": "popup.html"
     }
