@@ -3,7 +3,7 @@
 
 	"name": "Скрытие мусора Вконтакте",
 	"description": "Позволяет скрыть мусорные посты из социальной сети Вконтакте.",
-	"version": "2.0",
+	"version": "2.1",
 
 	"icons": {
 		"16": "icons/16x16.png",
@@ -18,9 +18,16 @@
 		"js": ["vk_inject.js"],
 		"css": ["vk_styles.css"]
 	}],
-    "browser_action": {
+	"permissions": [
+	    "tabs", "*://vk.com/*"
+	  ],
+	  "background" : {
+	    "scripts": ["background.js"],
+	    "persistent": false
+	  },
+    "page_action": {
         "default_title": "Чистка",
-
+		"default_icon": "icons/48x48.png",
         "default_popup": "popup.html"
     }
 }

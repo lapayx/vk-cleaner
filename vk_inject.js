@@ -1,5 +1,6 @@
 (function (){
 
+
     var WrongPost = [];
     var res =[];
     res = [
@@ -27,7 +28,15 @@
        "Олега Карнауха",
        "yквaльно мeсяц назaд со мной",
        "вкусный подарок для вашей любимой девочки",
-       "КАК НАЧАТЬ СВОЙ БИЗНЕС, НЕ ИМЕЯ ОПЫТА"
+       "КАК НАЧАТЬ СВОЙ БИЗНЕС, НЕ ИМЕЯ ОПЫТА",
+	"Разговоры о косметике, нижнем белье",
+"начала меня уволили с работы",
+"на счeт в 2 раза бoльшe",
+"дома в интернете зарабатывать",
+"долг перевалил за",
+"Внес депозит, получил",
+"хитрых трюка для запуска интернет бизнеса",
+"модели открытия бизнеса"
    ];
     if(!localStorage.getItem("WrongPost")){
 
@@ -102,8 +111,8 @@ var count = 0;
                     var delBut = node.querySelector("a[onclick*=\"feed.ig\"]");
                     if(delBut){
                         delBut.click();
-                        let c = localStorage.getItem("countHidePost") || 0;
-                        localStorage.setItem("countHidePost", c+1);
+                        //let c = localStorage.getItem("countHidePost") || 0;
+                        chrome.extension.sendMessage({type: "inc_hiden_posts"});
                     }
                     console.log("HIDE POST");
                 }
