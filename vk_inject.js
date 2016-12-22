@@ -108,11 +108,12 @@ var count = 0;
             for(var j = 0; j< WrongPost.length;j++)
                 if (text.includes(WrongPost[j])){
                     node.style.backgroundColor="red";
-                    var delBut = node.querySelector("a[onclick*=\"feed.ig\"]");
+                    let delBut = node.querySelector("a[onclick*=\"feed.ig\"]");
                     if(delBut){
                         delBut.click();
                         //let c = localStorage.getItem("countHidePost") || 0;
-                        chrome.extension.sendMessage({type: "inc_hiden_posts"});
+                        let b  =  typeof(browser) != "undefined" ? browser : chrome;
+                        b.runtime.sendMessage({type: "inc_hiden_posts"});
                     }
                     console.log("HIDE POST");
                 }
