@@ -31,23 +31,25 @@ b.runtime.onMessage.addListener(function (request, sender, sendResponse)
                         </tr>*/
 
         for(let i = 0; i<request.posts.length;i++){
-      let item =document.createElement("tr");
-      let d1 = document.createElement("td");
-      d1.textContent = request.posts[i];
-      
-      let d2 = document.createElement("td");
-       d2.classList.add("text-center");
-       d2.classList.add("align-middle");
-      //d2.textContent = request.posts[i];
-//<button type="button" class="btn btn-dark">Dark</button>
-      let del = document.createElement("button");
-      del.classList.add('btn');
-      del.classList.add('btn-danger')
-      del.classList.add('btn-sm')
-			del.textContent="X";
-			del.onclick = function(){
-				//alert(i);
-				b.runtime.sendMessage({type: "delete_hiden_posts",id:i});
+          let item =document.createElement("tr");
+          let d1 = document.createElement("td");
+          d1.textContent = request.posts[i];
+          
+          let d2 = document.createElement("td");
+          d2.classList.add("text-center");
+          d2.classList.add("align-middle");
+          let del = document.createElement("button");
+          del.classList.add('btn');
+          del.classList.add('btn-danger')
+          del.classList.add('btn-sm')
+          let ie = document.createElement("i");
+          ie.classList.add("fas");
+          ie.classList.add("fa-trash-alt");
+          del.appendChild(ie);
+
+
+          del.onclick = function(){
+				  b.runtime.sendMessage({type: "delete_hiden_posts",id:i});
 			};
       d2.appendChild(del);
       item.appendChild(d1);

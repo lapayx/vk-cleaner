@@ -19,7 +19,8 @@
 		"css": ["vk_styles.css"]
 	}],
 	"permissions": [
-	    "tabs", "*://vk.com/*"
+       "tabs", "*://vk.com/*",
+       "storage"
 	  ],
 	  "background" : {
 	    "scripts": ["background.js"],
