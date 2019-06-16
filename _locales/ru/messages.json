@@ -1,0 +1,10 @@
+{
+    "exstentionName":{
+        "message":"Скрытие мусора Вконтакте",
+        "description":""
+    },
+    "exstentionDescription":{
+        "message":"Позволяет скрыть мусорные посты из социальной сети Вконтакте по ключевым словам.",
+        "description":""
+    }
+}

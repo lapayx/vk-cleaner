@@ -1,0 +1,10 @@
+{
+    "exstentionName":{
+        "message":"Clean up VK",
+        "description":""
+    },
+    "exstentionDescription":{
+        "message":"Allows you to hide junk posts from the social network Vkontakte by keyword.",
+        "description":""
+    }
+}
