@@ -82,16 +82,27 @@ var count = 0;
             var text = contentNode[0].innerText;
 
             for(var j = 0; j< WrongPost.length;j++)
-                if (text.includes(WrongPost[j])){
+                if (text.includes(WrongPost[j].content)){
                     node.style.backgroundColor="red";
                     let delBut = node.querySelector("a[onclick*=\"feed.ig\"]");
                     if(delBut){
                         delBut.click();
                         //let c = localStorage.getItem("countHidePost") || 0;
                         
-                        b.runtime.sendMessage({type: "inc_hiden_posts"});
-                    }
-                    console.log("HIDE POST");
+						b.runtime.sendMessage({type: "inc_hiden_posts"});
+						console.log("Hidded  POST "+WrongPost[j].content);
+					}
+					if(WrongPost[j].isDeletePost){
+						let delPost = node.querySelector("a[onclick*=\"wall.deletePost\"]");
+						if(delPost){
+							delPost.click();
+							//let c = localStorage.getItem("countHidePost") || 0;
+							
+							b.runtime.sendMessage({type: "inc_delete_posts"});
+						}
+						console.log("Deleted  POST "+WrongPost[j].content);
+					}
+                    
 					return;
                 }
         }

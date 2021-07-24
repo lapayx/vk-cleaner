@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/all.min.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body style="height:500px;width:300px;">
-        <div class="container">
-            <div class="row">
-              <div class="col-sm">
-                <div>Заблокировано постов: <span id="count" style="color:red;font-weight: bold; font-size: 1em;"></span></div>
-		
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body style="height:500px;width:600px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div>Заблокировано постов: <span id="count" style="color:red;font-weight: bold; font-size: 1em;"></span>
+                    Удалено Постов <span id="count_deleted" style="color:red;font-weight: bold; font-size: 1em;"></span>
+                </div>
+
                 <div class="form-row align-items-center">
                     <div class="col-10">
-                            
-                            <input type="text" class="form-control "  id="inputNewPost" placeholder="фраза для исключения">
-                            </div>
-                    
-                            <div class="col-2">
-                            <button type="submit"  id="buttonNewPost" class="btn btn-primary "><i class="fas fa-plus"></i></button>
+
+                        <input type="text" class="form-control " id="inputNewPost" placeholder="фраза для исключения">
                     </div>
-                  
+
+                    <div class="col-2">
+                        <button type="submit" id="buttonNewPost" class="btn btn-primary "><i
+                                class="fas fa-plus"></i></button>
+                    </div>
+
                 </div>
-                <h4>Ключевые слова для удаления</h4>	
+                <h4>Ключевые слова для удаления</h4>
                 <table class="table">
                     <thead>
                         <tr>
                             <th scope="col">Ключевое слово</th>
+                            <th scope="col">Удалить с моей ленты</th>
                             <th scope="col">Action</th>
-                        
+
                         </tr>
                     </thead>
                     <tbody id="post">
                         <tr>
                             <th scope="row">1</th>
+                            <th scope="row"><input type="checkbox" /></th>
                             <td>Mark</td>
                         </tr>
                     </tbody>
                 </table>
 
-                
-                </div>
-              </div>
-              
+
+            </div>
         </div>
 
-        
-    </body>
-    <script src="popup.js"></script>
+    </div>
+
+
+</body>
+<script src="popup.js"></script>
+
 </html>

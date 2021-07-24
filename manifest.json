@@ -3,7 +3,7 @@
 
 	"name": "__MSG_exstentionName__",
 	"description": "__MSG_exstentionDescription__",
-	"version": "2.5",
+	"version": "2.6",
 	"default_locale": "ru",
 
 	"icons": {
